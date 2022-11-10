@@ -3,39 +3,39 @@ import { Line } from "react-chartjs-2";
 import "chartjs-plugin-streaming";
 import "./styles.css";
 import moment from "moment";
-import LoginForm from "./Login";
+// import LoginForm from "./Login";
 
-const adminUser = {
-  email: "admin@admin.com",
-  password: "admin123"
-}
+// const adminUser = {
+//   email: "admin@admin.com",
+//   password: "admin123"
+// }
 
-const [user, setUser] = useState({ name: "", email: "" });
-const [error, setError] = useState("");
+// const [user, setUser] = useState({ name: "", email: "" });
+// const [error, setError] = useState("");
 
 
 
-const Login = details => {
-  console.log(details)
-  if (details.email === adminUser.email && details.password === adminUser.password) {
-    console.log("Logged In")
-    setUser({
-      name: details.name,
-      email: details.email
-    });
+// const Login = details => {
+//   console.log(details)
+//   if (details.email === adminUser.email && details.password === adminUser.password) {
+//     console.log("Logged In")
+//     setUser({
+//       name: details.name,
+//       email: details.email
+//     });
 
-  }
-  else {
-    console.log("Details don not match")
-    setError("Details Do Not match")
-  }
+//   }
+//   else {
+//     console.log("Details don not match")
+//     setError("Details Do Not match")
+//   }
 
-}
+// }
 
-const Logout = () => {
-  console.log("Logout")
-  setUser({ name: "", email: "" });
-}
+// const Logout = () => {
+//   console.log("Logout")
+//   setUser({ name: "", email: "" });
+// }
 
 const Chart = require("react-chartjs-2").Chart;
 
@@ -119,14 +119,14 @@ function App() {
   return (
     <div className="App">
       <Line data={data} options={options} />
-      {(user.email !== "") ? (
+      {/* {(user.email !== "") ? (
         <div className="welcome">
           <h2>Welcome, <span>{user.name}</span></h2>
           <button onClick={Logout}>Logout</button>
         </div>
 
       ) :
-        (<LoginForm Login={Login} error={error} />)}
+        (<LoginForm Login={Login} error={error} />)} */}
     </div>
   );
 }
